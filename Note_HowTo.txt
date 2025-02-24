@@ -1,0 +1,33 @@
+*** Need: (pyqt6 or pyqt5)
+- Install package: pip install pyqt6-tools
+ 
+*** How to:
+Run cmd để gen file .py từ file .ui:
+python -m PyQt6.uic.pyuic -o output.py -x input.ui
+hoặc
+pyuic6 -o output.py -x input.ui
+ 
+Note: nếu dùng QT5 thì thay pyqt6 = pyqt5
+ 
+*** Cấu trúc file:
+--input.ui
+|
+--output.py
+|
+--main.py
+ 
+File main.py là file handle action chính, tất cả action sẽ được handle của các object ở đây.
+File input.ui là file xml UI được tạo ra từ QT design tool
+File output.py là file UI python được generate từ file .ui,trong file này chứa các thuộc tính của các objects
+ 
+*** Để thuận tiện thì có thể chạy file:
+Cài thư viện: install_lib.bat
+Gen file: gen_ui_py.bat 
+Run app: run_app.bat (nhập file python cần chạy [main.py])
+ 
+ 
+Link refer:
+- https://www.pythonguis.com/tutorials/pyqt6-first-steps-qt-designer/
+- https://realpython.com/qt-designer-python/
+
+Author: Dinh Nguyen
